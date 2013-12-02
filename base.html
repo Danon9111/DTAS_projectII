@@ -6,32 +6,39 @@
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
-		<section id="basic">
-			{% block basic %}
+		<header id="global">
+			{% block globalHeader %}
+				Global header
 			{% endblock %}
-			<header>
-				{% block basicHeader %}
-					Basic section
+		</header>
+		<section id="global">
+			<header id="title">
+				{% section header%}
+					title
 				{% endblock %}
 			</header>
-		</section>
-		<section id="top">
-			{% block top %}
-			{% endblock %}
-			<header>
-				{% block topHeader %}
-					Top section
+			<article id="bottom">
+				{% block bottom %}
+					view
 				{% endblock %}
-			</header>
+			</article>
 		</section>
-		<section id="bottom">
-			{% block bottom %}
-			{% endblock %}
-			<header>
-				{% block bottomHeader %}
-					Bottom section
+		<section id="sidebar">
+			<article id="current">
+				{% block current %}
+					current infos
 				{% endblock %}
-			</header>
+			</article>
+			<article id="menu">
+				{% block menu %}
+					MENU
+				{% endblock %}
+			</article>
 		</section>
+		<footer id="global">
+			{% block globalFooter %}
+				Global footer
+			{% endblock %}
+		</footer>
 	</body>
 </html>
